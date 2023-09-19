@@ -1,0 +1,189 @@
+Catálogo General:
+- Código
+- Nombre de producto
+- Costo
+- Precio
+- Existencias
+
+Catálogo por Tienda:
+- Código
+- Nombre de producto
+- Costo
+- Precio
+- Existencias
+
+Catálogo Dañados:
+- Código
+- Producto
+- Cantidad
+- Costo
+- Fecha
+- Número de tienda
+
+Listado de Tiendas:
+- Tienda (R)
+- Dirección
+- Nombre de tienda
+
+Tienda:
+- Número de tienda
+- Tipo de tienda (enum)
+- Catálogo por tienda (R)
+- Listado de pedidos (R)
+- Límite de productos
+
+Autorización Pedido: 
+- Codigo de pedido
+- Listado General de Pedidos (R)
+- Estado de autorización
+
+Detalle de Pedido:
+- Codigo de pedido
+- Producto
+- Código de producto
+- Cantidad
+
+Listado General de Pedidos:
+- Numero de pedido
+- Tienda (R)
+- Detalle de Pedido (R)
+- Autorización pedido (R)
+
+Bodega Central:
+- Codigo bodega
+- Catálogo general (R)
+- Catálogo dañados (R)
+- Listado general de pedidos (R)
+- Listado de Envios (R)
+- Reporte de incidencia (R)
+- Reporte de devolución (R)
+
+Listado de Envios:
+- Numero de envío
+- listado general de pedidos (R)
+- Fecha
+- Detalle de envío (R)
+- Estado 
+
+Detalle de Envío:
+- Numero envío
+- Codigo
+- Producto
+- Cantidad
+
+Reporte de Pedido:
+- Número de reporte
+- Listado de pedidos (R)
+- Estado de pedidos (enum)
+- Motivo de rechazo
+- Fecha de recepción
+- Fecha de entrega
+
+Usuarios Tienda:
+- ID
+- Nombres
+- Apellidos
+- Puesto
+- Tienda (R)
+- Estado (enum)
+- Cantidad de pedidos realizados
+
+Usuarios de Bodega:
+- ID
+- Nombres
+- Apellidos
+- Tiendas asignadas
+- Estado (enum)
+- Cantidad de envíos realizados
+
+Recibir Envío:
+- Número de envío
+- ID usuario
+- Tienda (R)
+- Fecha
+- Estado de envío
+
+Incidencia:
+- Codigo incidencia
+- Producto recibido
+- Código de producto
+- Cantidad de producto
+- Fecha
+- Tienda (R)
+- Motivo de incidencia
+
+Reporte de Incidencias:
+- Codigo incidencia
+- Estado de incidencia
+- Motivo de rechazo
+- Número de reporte
+- Fecha de recepcioón
+- Fecha de finalización
+
+Devolución:
+- Número de devolución
+- Reporte de incidencias
+- Producto 
+- Código de producto
+- Cantidad
+- Fecha
+
+Reporte de devolución:
+- Número de reporte
+- Devolución
+- Fecha de solicitud
+- Etapa de devolución (enum)
+- Fecha de devolución
+
+Reporte de Compra de Productos:
+- Numero Compra
+- Fecha
+- Proveedor
+- Detalle compra de productos
+
+Detalle Compra de Productos:
+- Producto
+- Código de producto
+- Cantidad
+- Precio
+
+Listado de Proveedores:
+- ID
+- Nombre
+- Estado (enum)
+
+Supervisores: 
+- ID
+- Nombres
+- Apellidos
+- Estado (enum)
+- Listado general de pedidos
+
+Administradores:
+- ID
+- Nombres
+- Apellidos
+- Catalogo general (R)
+- Listado de proveedores (R)
+- Usuarios de Tienda (R)
+- Usuarios de Bodega (R)
+- Supervisores (R)
+- Listado de Tiendas (R)
+- Listado general de pedidos (R)
+
+
+ENUM:
+- Tienda_Normal
+- Tienda_Supervisada
+- Pedido_Enviado
+- Pedido_Recibido
+- Pedido_Rechazado
+- Usuario_Activo
+- Usuario_Inactivo
+- Solicitud_Devolución
+- Devolución_Aprobada
+- Devolución_Rechazada
+- Envío_Devolución
+- Devuelto
+- Proveedor_Activo
+- Proveedor_Apartado
